@@ -61,7 +61,7 @@ exports[`interactive-transactions (mysql) () batching raw rollback 1`] = `
 Invalid \`prisma.$executeRaw()\` invocation:
 
 
-  Raw query failed. Code: \`1064\`. Message: \`You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"User" (id, email) VALUES (?, ?)' at line 1\`
+  Raw query failed. Code: \`1062\`. Message: \`Duplicate entry '1' for key 'PRIMARY'\`
 `;
 
 exports[`interactive-transactions (mysql) () batching rollback 1`] = `

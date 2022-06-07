@@ -273,12 +273,20 @@ testMatrix.setupTestSuite(({ provider }) => {
         },
       })
 
-      const result = prisma.$transaction([
-        prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'2'}, ${'user_2@website.com'})`,
-        prisma.$queryRaw`DELETE FROM "User"`,
-        prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
-        prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
-      ])
+      const result =
+        provider === 'mysql'
+          ? prisma.$transaction([
+              prisma.$executeRaw`INSERT INTO User (id, email) VALUES (${'2'}, ${'user_2@website.com'})`,
+              prisma.$queryRaw`DELETE FROM User`,
+              prisma.$executeRaw`INSERT INTO User (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
+              prisma.$executeRaw`INSERT INTO User (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
+            ])
+          : prisma.$transaction([
+              prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'2'}, ${'user_2@website.com'})`,
+              prisma.$queryRaw`DELETE FROM "User"`,
+              prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
+              prisma.$executeRaw`INSERT INTO "User" (id, email) VALUES (${'1'}, ${'user_1@website.com'})`,
+            ])
 
       await expect(result).rejects.toThrowErrorMatchingSnapshot()
 
