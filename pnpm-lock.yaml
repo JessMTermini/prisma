@@ -149,7 +149,7 @@ importers:
       log-update: 4.0.0
       make-dir: 3.1.0
       node-fetch: 2.6.7
-      open: 7.4.2
+      open: 8.4.0
       pkg-up: 3.1.0
       replace-string: 3.1.0
       resolve-pkg: 2.0.0
@@ -195,7 +195,7 @@ importers:
       log-update: 4.0.0
       make-dir: 3.1.0
       node-fetch: 2.6.7
-      open: 7.4.2
+      open: 8.4.0
       pkg-up: 3.1.0
       replace-string: 3.1.0
       resolve-pkg: 2.0.0
@@ -630,7 +630,7 @@ importers:
       mock-stdin: 1.0.0
       new-github-issue-url: 0.2.1
       node-fetch: 2.6.7
-      open: '7'
+      open: '8'
       ora: 5.4.1
       p-map: 4.0.0
       prompts: 2.4.2
@@ -680,7 +680,7 @@ importers:
       make-dir: 3.1.0
       new-github-issue-url: 0.2.1
       node-fetch: 2.6.7
-      open: 7.4.2
+      open: 8.4.0
       ora: 5.4.1
       p-map: 4.0.0
       prompts: 2.4.2
@@ -6971,7 +6971,7 @@ packages:
       pretty-format: 28.1.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.8.0_1aa268a46eceb241409bb825192c75ab
+      ts-node: 10.8.0_6b27bdda513397a05be5d4c70869feb3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8661,13 +8661,6 @@ packages:
     dependencies:
       is-wsl: 1.1.0
     dev: true
-
-  /open/7.4.2:
-    resolution: {integrity: sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==}
-    engines: {node: '>=8'}
-    dependencies:
-      is-docker: 2.2.1
-      is-wsl: 2.2.0
 
   /open/8.4.0:
     resolution: {integrity: sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==}
