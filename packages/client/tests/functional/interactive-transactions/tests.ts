@@ -11,6 +11,11 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const testIf = (condition: boolean) => (condition ? test : test.skip)
 
 testMatrix.setupTestSuite(({ provider }) => {
+  // TODO: Technically, only "high concurrency" test requires larger timeout
+  // but `jest.setTimeout` does not work inside of the test at the moment
+  //  https://github.com/facebook/jest/issues/11543
+  jest.setTimeout(20_000)
+
   beforeEach(async () => {
     await prisma.user.deleteMany()
   })
@@ -193,12 +198,12 @@ testMatrix.setupTestSuite(({ provider }) => {
     await expect(result).rejects.toThrowErrorMatchingInlineSnapshot(`
 
             Invalid \`transactionBoundPrisma.user.create()\` invocation in
-            /client/tests/functional/interactive-transactions/tests.ts:186:41
+            /client/tests/functional/interactive-transactions/tests.ts:191:41
 
-              183 })
-              184 
-              185 const result = prisma.$transaction(async () => {
-            → 186   await transactionBoundPrisma.user.create(
+              188 })
+              189 
+              190 const result = prisma.$transaction(async () => {
+            → 191   await transactionBoundPrisma.user.create(
               Transaction API error: Transaction already closed: Transaction is no longer valid. Last state: 'Committed'.
           `)
 

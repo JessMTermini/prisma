@@ -3,24 +3,24 @@
 exports[`interactive-transactions (mongodb) () batching rollback 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:238:19
+/client/tests/functional/interactive-transactions/tests.ts:243:19
 
-  235  */
-  236 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
-  237   const result = prisma.$transaction([
-→ 238     prisma.user.create(
+  240  */
+  241 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
+  242   const result = prisma.$transaction([
+→ 243     prisma.user.create(
   Unique constraint failed on the constraint: \`User_email_key\`
 `;
 
 exports[`interactive-transactions (mongodb) () rollback query 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:164:25
+/client/tests/functional/interactive-transactions/tests.ts:169:25
 
-  161   },
-  162 })
-  163 
-→ 164 await prisma.user.create(
+  166   },
+  167 })
+  168 
+→ 169 await prisma.user.create(
   Unique constraint failed on the constraint: \`User_email_key\`
 `;
 
@@ -35,24 +35,24 @@ Invalid \`prisma.$executeRaw()\` invocation:
 exports[`interactive-transactions (mysql) () batching rollback 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:238:19
+/client/tests/functional/interactive-transactions/tests.ts:243:19
 
-  235  */
-  236 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
-  237   const result = prisma.$transaction([
-→ 238     prisma.user.create(
+  240  */
+  241 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
+  242   const result = prisma.$transaction([
+→ 243     prisma.user.create(
   Unique constraint failed on the constraint: \`User_email_key\`
 `;
 
 exports[`interactive-transactions (mysql) () rollback query 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:164:25
+/client/tests/functional/interactive-transactions/tests.ts:169:25
 
-  161   },
-  162 })
-  163 
-→ 164 await prisma.user.create(
+  166   },
+  167 })
+  168 
+→ 169 await prisma.user.create(
   Unique constraint failed on the constraint: \`User_email_key\`
 `;
 
@@ -67,24 +67,24 @@ Invalid \`prisma.$executeRaw()\` invocation:
 exports[`interactive-transactions (postgresql) () batching rollback 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:238:19
+/client/tests/functional/interactive-transactions/tests.ts:243:19
 
-  235  */
-  236 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
-  237   const result = prisma.$transaction([
-→ 238     prisma.user.create(
+  240  */
+  241 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
+  242   const result = prisma.$transaction([
+→ 243     prisma.user.create(
   Unique constraint failed on the fields: (\`email\`)
 `;
 
 exports[`interactive-transactions (postgresql) () rollback query 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:164:25
+/client/tests/functional/interactive-transactions/tests.ts:169:25
 
-  161   },
-  162 })
-  163 
-→ 164 await prisma.user.create(
+  166   },
+  167 })
+  168 
+→ 169 await prisma.user.create(
   Unique constraint failed on the fields: (\`email\`)
 `;
 
@@ -99,23 +99,23 @@ Invalid \`prisma.$executeRaw()\` invocation:
 exports[`interactive-transactions (sqlite) () batching rollback 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:238:19
+/client/tests/functional/interactive-transactions/tests.ts:243:19
 
-  235  */
-  236 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
-  237   const result = prisma.$transaction([
-→ 238     prisma.user.create(
+  240  */
+  241 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
+  242   const result = prisma.$transaction([
+→ 243     prisma.user.create(
   Unique constraint failed on the fields: (\`email\`)
 `;
 
 exports[`interactive-transactions (sqlite) () rollback query 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
-/client/tests/functional/interactive-transactions/tests.ts:164:25
+/client/tests/functional/interactive-transactions/tests.ts:169:25
 
-  161   },
-  162 })
-  163 
-→ 164 await prisma.user.create(
+  166   },
+  167 })
+  168 
+→ 169 await prisma.user.create(
   Unique constraint failed on the fields: (\`email\`)
 `;
