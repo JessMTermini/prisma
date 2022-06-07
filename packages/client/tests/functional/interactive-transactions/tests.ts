@@ -298,7 +298,7 @@ testMatrix.setupTestSuite(({ provider }) => {
 
   // running this test on isolated prisma instance since
   // middleware change the return values of model methods
-  // and this would affect subsequent tests if run on a min instance
+  // and this would affect subsequent tests if run on a main instance
   describe('middlewares', () => {
     let isolatedPrisma: typeof prisma
 
