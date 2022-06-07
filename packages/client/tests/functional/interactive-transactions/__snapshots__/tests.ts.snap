@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`interactive-transactions (cockroachdb) () batching raw rollback 1`] = `
+
+Invalid \`prisma.$executeRaw()\` invocation:
+
+
+  Raw query failed. Code: \`23505\`. Message: \`Key (id)=('1') already exists.\`
+`;
+
+exports[`interactive-transactions (cockroachdb) () batching rollback 1`] = `
+
+Invalid \`prisma.user.create()\` invocation in
+/client/tests/functional/interactive-transactions/tests.ts:243:19
+
+  240  */
+  241 testIf(getClientEngineType() === ClientEngineType.Library)('batching rollback', async () => {
+  242   const result = prisma.$transaction([
+→ 243     prisma.user.create(
+  Unique constraint failed on the fields: (\`email\`)
+`;
+
+exports[`interactive-transactions (cockroachdb) () rollback query 1`] = `
+
+Invalid \`prisma.user.create()\` invocation in
+/client/tests/functional/interactive-transactions/tests.ts:169:25
+
+  166   },
+  167 })
+  168 
+→ 169 await prisma.user.create(
+  Unique constraint failed on the fields: (\`email\`)
+`;
+
 exports[`interactive-transactions (mongodb) () batching rollback 1`] = `
 
 Invalid \`prisma.user.create()\` invocation in
